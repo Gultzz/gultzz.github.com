@@ -155,10 +155,6 @@ header{
     font-weight: 400;
     font-size: 6vh; 
 }
-/* #main{
-    display: block;
-    height:100%;
-} */
 
 /*?     Section 1     */
 
@@ -170,12 +166,10 @@ header{
     width: 100%;
 }
 #sec1 h2{
-    /* position: absolute; */
     font-family: 'Quicksand', sans-serif;
     font-size:4.5vh;
     margin-right: 1vh;
     font-weight: 100;
-    /* right: 10px; */
     text-align:end;
 }
 #sec1 h1{
@@ -232,19 +226,14 @@ header{
 }
 #sec2 img[alt="CSS"]{
     margin-left: -20%;
-    /* margin-top: -1.8%; */
     width: 11%;
 }
 #sec2 img[alt="JS"]{
     margin-left: 20%;
-    /* margin-top: -1.8%; */
 }
 #sec2 img[alt="PHP"]{
     margin-top: 12%;
 }
-
-
-
 
 
 #sec3{
@@ -282,11 +271,9 @@ header{
 #sec3 ul li{
     font-family: 'Quicksand', sans-serif;
     font-weight: 100;
-    /* align-items: center; */
     font-size: 4vh;
     display:flex;
     flex-direction: row;
-    /* justify-content: center; */
     margin-top:2vh;
     margin-left: 20vh;
 }
@@ -299,8 +286,6 @@ footer{
     font-size: 1.5vh;
     color: white;
     width:100%;
-    /* position:absolute;
-    bottom:0px; */
     padding:2vh 0;
     text-align: center;
     background-color: #444;
@@ -395,13 +380,11 @@ footer{
         width: 18.8%;
     }
     #sec2 img[alt="CSS"]{
-        /* margin-top: -1.8%; */
         margin-left: -30%;
         width: 19.5%;
     }
     #sec2 img[alt="JS"]{
         margin-left: 30%;
-        /* margin-top: -1.8%; */
     }
     #sec2 img[alt="PHP"]{
         margin-top: 22%;
@@ -437,64 +420,3 @@ footer{
         margin-left: 0;
     }
 }
-/* @media screen and (max-width:1000px){
-    #teste{
-    position: fixed !important;
-    z-index: 9000;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: none;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-}
-#teste2{
-    transition: 1s;
-    position: fixed !important;
-    left: 0px;
-    top: 0px;
-    z-index: 11000;
-    margin: 0;
-    padding: 0;
-    max-width: 60vh;
-    width: 0vh;
-    overflow-x: hidden;
-    height: 100%;
-    background: linear-gradient(to top, rgb(50, 50, 50),rgb(39, 39, 39));
-}
-.sites{
-    box-shadow: 0 0 2vh 0.3vh rgb(29, 29, 29);
-    display: flex;
-    margin: 0vh 5vh 5vh 12vh;
-    flex-direction: column;
-    width: 18vw;
-    background-color: #555;
-    border: 2vh solid #555;
-}
-.sites img{
-    cursor: pointer;
-    display:flex;
-    justify-content: center;
-    width: 90%;
-    margin: 1vh;
-}
-.sites h2{
-    font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 100;
-    text-align: center;
-    font-size: 2vh;
-}
-.sites p{
-    font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 100;
-    font-size: 1.5vh;
-    margin: 1.5vh 0.5vh 1vh 1vh;
-}
-
-#fecha{
-    width: 3vw;
-    cursor: pointer;
-    margin-top: 1vw;
-    margin-left: 1vw;
-}
-} */
