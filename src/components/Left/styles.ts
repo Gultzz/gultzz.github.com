@@ -140,7 +140,8 @@ export const PositionTitle = styled.p`
 export const PositionSkills = styled.h2`
   margin-top: 10px;
   font-family: "Bayon", "Poppins", sans-serif;
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 16.5px;
 `;
 

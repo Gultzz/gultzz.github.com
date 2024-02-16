@@ -32,7 +32,7 @@ export const ContainerCenter = styled.div`
 export const InfoGroupContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 48px;
 `;
 
 export const InfoTitle = styled.p`

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import * as S from "./styles";
 import {ReactComponent as CompanyLogo} from "../../assets/companyLogo.svg";
+import {ReactComponent as EgsWhiteLogo} from "../../assets/logo-egs-white.svg";
 import {ReactComponent as Info} from "../../assets/info.svg";
 import Mycvpt from "../../assets/mycurriculopt.pdf";
 import Mycven from "../../assets/mycurriculoen.pdf";
@@ -51,6 +52,32 @@ function Right() {
               {t("firedevResume3")}
             </S.InfoText>
           </S.InfoExperiencesText>
+          <S.InfoExperiencesText>
+            <S.PositionData>
+              <p>{t("position")}</p> <p>|</p>{" "}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  gap: 6,
+                }}
+              >
+                {React.createElement(EgsWhiteLogo)}
+                <p>EGS Sistemas</p>
+              </div>{" "}
+              <p>|</p> <p>10/2023 - {t("egsFinalDate")}</p>
+            </S.PositionData>
+            <S.InfoText>
+              {t("egsResume1")}
+              <br />
+              <br />
+              {t("egsResume2")}
+              <br />
+              <br />
+              {t("egsResume3")}
+            </S.InfoText>
+          </S.InfoExperiencesText>
         </S.InfoGroupContainer>
         <S.InfoGroupContainer>
           <S.InfoTitle>{t("languages")}</S.InfoTitle>
@@ -58,7 +85,11 @@ function Right() {
             {t("ptLanguage")}
             <br />
             {t("enLanguage")}:{" "}
-            <a href="https://www.efset.org/cefr/b2/" target="_blank">
+            <a
+              href="https://www.efset.org/cefr/b2/"
+              target="_blank"
+              rel="noreferrer"
+            >
               B2 (CEFR)
             </a>{" "}
             - {t("enLanguageText")}
