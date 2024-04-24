@@ -37,12 +37,19 @@ function Left() {
             <S.PositionTitle>{t("position")}</S.PositionTitle>
             <S.PositionSkills>
               ReactJS | React Native | NextJS | JavaScript | TypeScript | NodeJS
+              | NestJS | ExpressJS
             </S.PositionSkills>
           </S.ApresentationContainer>
           <S.InfoGroupContainer>
             <S.InfoTitle>{t("aboutMe")}</S.InfoTitle>
             <S.InfoText>
-              {t("aboutMeText")}
+              {t("aboutMeText1")}
+              <br />
+              <br />
+              {t("aboutMeText2")}
+              <br />
+              <br />
+              {t("aboutMeText3")}
               <br />
               <br />
               {t("personality")}:{" "}
