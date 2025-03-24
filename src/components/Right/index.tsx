@@ -1,16 +1,17 @@
-import React, {useState} from "react";
-import * as S from "./styles";
-import {ReactComponent as CompanyLogo} from "../../assets/companyLogo.svg";
-import {ReactComponent as EgsWhiteLogo} from "../../assets/logo-egs-white.svg";
-import {ReactComponent as Info} from "../../assets/info.svg";
-import Mycvpt from "../../assets/mycurriculopt.pdf";
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { ReactComponent as CompanyLogo } from "../../assets/companyLogo.svg";
+import { ReactComponent as Info } from "../../assets/info.svg";
+import { ReactComponent as InCt } from "../../assets/linkedinCertificate.svg";
+import { ReactComponent as EgsWhiteLogo } from "../../assets/logo-egs-white.svg";
 import Mycven from "../../assets/mycurriculoen.pdf";
-import {ReactComponent as InCt} from "../../assets/linkedinCertificate.svg";
+import Mycvpt from "../../assets/mycurriculopt.pdf";
 import Level from "../Level";
-import {useTranslation} from "react-i18next";
+import * as S from "./styles";
+import { LinkedinCertificate } from "./LinkedinCertificate.component";
 
 function Right() {
-  const {t, i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
   const [showTooltip, setShowTooltip] = useState(false);
 
   function onOverInfo() {
@@ -42,19 +43,13 @@ function Right() {
               </div>{" "}
               <p>|</p> <p>11/2021 - 07/2023</p>
             </S.PositionData>
-            <S.InfoText>
-              {t("firedevResume1")}
-              <br />
-              <br />
-              {t("firedevResume2")}
-              <br />
-              <br />
-              {t("firedevResume3")}
-            </S.InfoText>
+            <S.InfoText
+              dangerouslySetInnerHTML={{ __html: t("firedevResume") }}
+            ></S.InfoText>
           </S.InfoExperiencesText>
           <S.InfoExperiencesText>
             <S.PositionData>
-              <p>{t("position")}</p> <p>|</p>{" "}
+              <p>{t("egsPosition")}</p> <p>|</p>{" "}
               <div
                 style={{
                   display: "flex",
@@ -68,15 +63,9 @@ function Right() {
               </div>{" "}
               <p>|</p> <p>10/2023 - {t("egsFinalDate")}</p>
             </S.PositionData>
-            <S.InfoText>
-              {t("egsResume1")}
-              <br />
-              <br />
-              {t("egsResume2")}
-              <br />
-              <br />
-              {t("egsResume3")}
-            </S.InfoText>
+            <S.InfoText
+              dangerouslySetInnerHTML={{ __html: t("egsResume") }}
+            ></S.InfoText>
           </S.InfoExperiencesText>
         </S.InfoGroupContainer>
         <S.InfoGroupContainer>
@@ -86,13 +75,12 @@ function Right() {
             <br />
             {t("enLanguage")}:{" "}
             <a
-              href="https://www.efset.org/cefr/b2/"
+              href="https://cert.efset.org/5JSjLm"
               target="_blank"
               rel="noreferrer"
             >
-              B2 (CEFR)
-            </a>{" "}
-            - {t("enLanguageText")}
+              B2 {i18n.language === "pt-BR" ? "(CERTIFICADO)" : "(CERTIFICATE)"}
+            </a>
           </S.InfoText>
         </S.InfoGroupContainer>
         <S.InfoGroupContainer>
@@ -145,7 +133,7 @@ function Right() {
                 })}
               </div>
             </S.HowItWorksTitleContainer>
-            <div style={{maxWidth: 200}}>
+            <div style={{ maxWidth: 200 }}>
               <S.InfoText
                 style={{
                   fontSize: 12,
@@ -165,124 +153,85 @@ function Right() {
                 {t("veryGood")}
               </S.InfoText>
             </div>
-            <div style={{display: "flex", gap: 6, alignItems: "center"}}>
+            <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
               <Level onlyProgress value={50} />
-              <S.InfoText style={{whiteSpace: "nowrap"}}>
+              <S.InfoText style={{ whiteSpace: "nowrap" }}>
                 = {t("experienceLevel")}
               </S.InfoText>
             </div>
           </S.HowWorksLevels>
+
           <S.LevelContainer>
             <S.InfoTextLevel>
-              {t("programmingLogic")} - 3.5 {t("years")}
+              {t("programmingLogic")} - 5.5 {t("years")}
             </S.InfoTextLevel>
             <Level value={100} />
           </S.LevelContainer>
           <S.LevelContainer>
             <S.InfoTextLevel>
-              ReactJS - 3 {t("years")}
-              <S.InfoLink
-                href="https://www.linkedin.com/in/gustavo-schultz-cruz/"
-                target="_blank"
-                style={{
-                  height: 18,
-                }}
-              >
-                {React.createElement(InCt, {
-                  style: {
-                    height: 18,
-                    cursor: "pointer",
-                  },
-                })}
-                {t("linkedinCertificate")}
-              </S.InfoLink>
-            </S.InfoTextLevel>
-            <Level value={90} />
-          </S.LevelContainer>
-          <S.LevelContainer>
-            <S.InfoTextLevel>React Native - 3 {t("years")}</S.InfoTextLevel>
-            <Level value={90} />
-          </S.LevelContainer>
-          <S.LevelContainer>
-            <S.InfoTextLevel>
-              Javascript - 3.5 {t("years")}{" "}
-              <S.InfoLink
-                href="https://www.linkedin.com/in/gustavo-schultz-cruz/"
-                target="_blank"
-                style={{
-                  height: 18,
-                }}
-              >
-                {React.createElement(InCt, {
-                  style: {
-                    height: 18,
-                    cursor: "pointer",
-                  },
-                })}
-                {t("linkedinCertificate")}
-              </S.InfoLink>
+              ReactJS - 5 {t("years")}
+              <LinkedinCertificate />
             </S.InfoTextLevel>
             <Level value={100} />
           </S.LevelContainer>
           <S.LevelContainer>
-            <S.InfoTextLevel>Typescript - 3 {t("years")}</S.InfoTextLevel>
+            <S.InfoTextLevel>React Native - 5 {t("years")}</S.InfoTextLevel>
+            <Level value={100} />
+          </S.LevelContainer>
+          <S.LevelContainer>
+            <S.InfoTextLevel>
+              Javascript - 5 {t("years")}
+              <LinkedinCertificate />
+            </S.InfoTextLevel>
+            <Level value={100} />
+          </S.LevelContainer>
+          <S.LevelContainer>
+            <S.InfoTextLevel>Typescript - 5 {t("years")}</S.InfoTextLevel>
             <Level value={90} />
           </S.LevelContainer>
           <S.LevelContainer>
-            <S.InfoTextLevel>NodeJS - 1 {t("year")}</S.InfoTextLevel>
+            <S.InfoTextLevel>Node - 3 {t("years")}</S.InfoTextLevel>
             <Level value={70} />
           </S.LevelContainer>
           <S.LevelContainer>
-            <S.InfoTextLevel>Web Design - 3.5 {t("years")}</S.InfoTextLevel>
+            <S.InfoTextLevel>Nest - 2 {t("years")}</S.InfoTextLevel>
+            <Level value={70} />
+          </S.LevelContainer>
+          <S.LevelContainer>
+            <S.InfoTextLevel>C# - 1.5 {t("years")}</S.InfoTextLevel>
+            <Level value={60} />
+          </S.LevelContainer>
+          <S.LevelContainer>
+            <S.InfoTextLevel>AngularJS - 1.5 {t("years")}</S.InfoTextLevel>
             <Level value={80} />
           </S.LevelContainer>
           <S.LevelContainer>
-            <S.InfoTextLevel>Git - 3 {t("years")}</S.InfoTextLevel>
+            <S.InfoTextLevel>Express - 2 {t("years")}</S.InfoTextLevel>
+            <Level value={70} />
+          </S.LevelContainer>
+          <S.LevelContainer>
+            <S.InfoTextLevel>Web Design - 5 {t("years")}</S.InfoTextLevel>
             <Level value={80} />
           </S.LevelContainer>
           <S.LevelContainer>
-            <S.InfoTextLevel>HTML - 3.5 {t("years")}</S.InfoTextLevel>
+            <S.InfoTextLevel>Git - 5 {t("years")}</S.InfoTextLevel>
+            <Level value={80} />
+          </S.LevelContainer>
+          <S.LevelContainer>
+            <S.InfoTextLevel>HTML - 5.5 {t("years")}</S.InfoTextLevel>
             <Level value={100} />
           </S.LevelContainer>
           <S.LevelContainer>
             <S.InfoTextLevel>
-              CSS - 3.5 {t("years")}
-              <S.InfoLink
-                href="https://www.linkedin.com/in/gustavo-schultz-cruz/"
-                target="_blank"
-                style={{
-                  height: 18,
-                }}
-              >
-                {React.createElement(InCt, {
-                  style: {
-                    height: 18,
-                    cursor: "pointer",
-                  },
-                })}
-                {t("linkedinCertificate")}
-              </S.InfoLink>
+              CSS - 5.5 {t("years")}
+              <LinkedinCertificate />
             </S.InfoTextLevel>
             <Level value={100} />
           </S.LevelContainer>
           <S.LevelContainer>
             <S.InfoTextLevel>
-              {t("frontendDevelopment")} - 3.5 {t("years")}
-              <S.InfoLink
-                href="https://www.linkedin.com/in/gustavo-schultz-cruz/"
-                target="_blank"
-                style={{
-                  height: 18,
-                }}
-              >
-                {React.createElement(InCt, {
-                  style: {
-                    height: 18,
-                    cursor: "pointer",
-                  },
-                })}
-                {t("linkedinCertificate")}
-              </S.InfoLink>
+              {t("frontendDevelopment")} - 5 {t("years")}
+              <LinkedinCertificate />
             </S.InfoTextLevel>
             <Level value={100} />
           </S.LevelContainer>

@@ -1,3 +1,4 @@
+import { HTMLAttributes } from "react";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -79,11 +80,11 @@ export const LanguageButtonsContainer = styled.div`
 export const LanguageButton = styled.button<any>`
   cursor: pointer;
   position: relative;
-  background-color: ${({active}) => (active ? "#121212" : "#383838")};
+  background-color: ${({ active }) => (active ? "#121212" : "#383838")};
   width: 132px;
   border-radius: 999px;
   height: 28px;
-  border: 2px solid ${({active}) => (active ? "#fff" : "#383838")};
+  border: 2px solid ${({ active }) => (active ? "#fff" : "#383838")};
 `;
 
 export const ButtonCVA = styled.a`
@@ -181,7 +182,10 @@ export const InfoTitle = styled.p`
   }
 `;
 
-export const InfoText = styled.p<any>`
-  line-height: ${({link}) => (link ? 26 : 21)}px;
+export const InfoText = styled.div<
+  HTMLAttributes<HTMLDivElement> & { link?: boolean }
+>`
+  color: #fff;
+  line-height: ${({ link }) => (link ? 26 : 21)}px;
   font-size: 14px;
 `;

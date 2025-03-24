@@ -1,11 +1,11 @@
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import Foto from "../../assets/foto.svg";
 import Mycven from "../../assets/mycurriculoen.pdf";
 import Mycvpt from "../../assets/mycurriculopt.pdf";
 import * as S from "./styles";
 
 function Left() {
-  const {t, i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <S.Container>
       <S.ContainerCenter>
@@ -36,35 +36,15 @@ function Left() {
             </S.LanguageButtonsContainer>
             <S.PositionTitle>{t("position")}</S.PositionTitle>
             <S.PositionSkills>
-              ReactJS | React Native | NextJS | JavaScript | TypeScript | NodeJS
-              | NestJS | ExpressJS
+              ReactJS | React Native | Expo | JavaScript | TypeScript | NodeJS |
+              NestJS | ExpressJS
             </S.PositionSkills>
           </S.ApresentationContainer>
           <S.InfoGroupContainer>
             <S.InfoTitle>{t("aboutMe")}</S.InfoTitle>
-            <S.InfoText>
-              {t("aboutMeText1")}
-              <br />
-              <br />
-              {t("aboutMeText2")}
-              <br />
-              <br />
-              {t("aboutMeText3")}
-              <br />
-              <br />
-              {t("personality")}:{" "}
-              <a
-                href={
-                  i18n.language === "pt-BR"
-                    ? "https://www.16personalities.com/br/personalidade-istj"
-                    : "https://www.16personalities.com/istj-personality"
-                }
-                target="_blank"
-                rel="noreferrer"
-              >
-                ISTJ-A
-              </a>
-            </S.InfoText>
+            <S.InfoText
+              dangerouslySetInnerHTML={{ __html: t("aboutMeText") }}
+            ></S.InfoText>
           </S.InfoGroupContainer>
           <S.InfoGroupContainer>
             <S.InfoTitle>{t("contact")}</S.InfoTitle>

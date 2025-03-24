@@ -13,11 +13,9 @@ function Level({
       <S.ContainerOnlyProgress>
         <S.ProgressOnly />
         <S.LinesContainer>
-          <S.Line />
-          <S.Line />
-          <S.Line />
-          <S.Line />
-          <S.Line />
+          {Array.from({ length: 5 }).map(() => (
+            <S.Line />
+          ))}
         </S.LinesContainer>
       </S.ContainerOnlyProgress>
     );
@@ -26,15 +24,9 @@ function Level({
     <S.Container>
       <S.Progress value={value} />
       <S.LinesContainer>
-        <S.Line />
-        <S.Line />
-        <S.Line />
-        <S.Line />
-        <S.Line />
-        <S.Line />
-        <S.Line />
-        <S.Line />
-        <S.Line />
+        {Array.from({ length: 9 }).map(() => (
+          <S.Line />
+        ))}
       </S.LinesContainer>
     </S.Container>
   );

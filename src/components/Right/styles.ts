@@ -1,3 +1,4 @@
+import { HTMLAttributes } from "react";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -52,13 +53,16 @@ export const InfoTitle = styled.p`
   }
 `;
 
-export const InfoText = styled.p<any>`
-  line-height: ${({link}) => (link ? 26 : 21)}px;
+export const InfoText = styled.div<
+  HTMLAttributes<HTMLDivElement> & { link?: boolean }
+>`
+  color: #fff;
+  line-height: ${({ link }) => (link ? 26 : 21)}px;
   font-size: 14px;
 `;
 
 export const InfoTextLevel = styled.p<any>`
-  line-height: ${({link}) => (link ? 26 : 21)}px;
+  line-height: ${({ link }) => (link ? 26 : 21)}px;
   font-size: 14px;
   gap: 8px;
   display: inline-flex;
