@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "./static/css/main.6a666371.css",
-    "main.js": "./static/js/main.b79f4a53.js",
+    "main.js": "./static/js/main.64a7c1a0.js",
     "static/media/foto.svg": "./static/media/foto.65e7783dcd9e7676c42053b9f41e88b2.svg",
-    "static/media/mycurriculopt.pdf": "./static/media/mycurriculopt.4a2d05b0fd3ed05230e9.pdf",
-    "static/media/mycurriculoen.pdf": "./static/media/mycurriculoen.43b49e4d6855541f2d45.pdf",
+    "static/media/mycurriculopt.pdf": "./static/media/mycurriculopt.2b4335c90646a001fb8f.pdf",
+    "static/media/mycurriculoen.pdf": "./static/media/mycurriculoen.03c1ee0be20a26ca170e.pdf",
     "static/media/logo-egs-white.svg": "./static/media/logo-egs-white.0d7f33b3db80ae7b9ae8b277e0340f29.svg",
     "index.html": "./index.html",
     "static/media/companyLogo.svg": "./static/media/companyLogo.c59d1a3ef811682ff077750c2c50eb67.svg",
     "static/media/linkedinCertificate.svg": "./static/media/linkedinCertificate.213d168c25010ddefd06252ea2171191.svg",
     "static/media/info.svg": "./static/media/info.1e7e8525e045d4af9a5e2982c80acdf4.svg",
     "main.6a666371.css.map": "./static/css/main.6a666371.css.map",
-    "main.b79f4a53.js.map": "./static/js/main.b79f4a53.js.map"
+    "main.64a7c1a0.js.map": "./static/js/main.64a7c1a0.js.map"
   },
   "entrypoints": [
     "static/css/main.6a666371.css",
-    "static/js/main.b79f4a53.js"
+    "static/js/main.64a7c1a0.js"
   ]
 }
