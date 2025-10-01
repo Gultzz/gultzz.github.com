@@ -24,11 +24,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          ref: main
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -36,7 +33,7 @@ jobs:
       - name: Upload build folder
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./build"
+          path: "build/"
 
       - name: Deploy to GitHub Pages
         id: deployment
