@@ -36,8 +36,8 @@ function Left() {
             </S.LanguageButtonsContainer>
             <S.PositionTitle>{t("position")}</S.PositionTitle>
             <S.PositionSkills>
-              ReactJS | React Native | Expo | JavaScript | TypeScript | NodeJS |
-              NestJS | ExpressJS
+              ReactJS | React Native | Angular | Expo | NextJS | JavaScript |
+              TypeScript | NodeJS | NestJS | ExpressJS | C#
             </S.PositionSkills>
           </S.ApresentationContainer>
           <S.InfoGroupContainer>

@@ -29,7 +29,7 @@ function Right() {
           <S.InfoTitle>{t("experiences")}</S.InfoTitle>
           <S.InfoExperiencesText>
             <S.PositionData>
-              <p>{t("position")}</p> <p>|</p>{" "}
+              <p>{t("firedevPosition")}</p> <p>|</p>{" "}
               <div
                 style={{
                   display: "flex",
@@ -61,7 +61,7 @@ function Right() {
                 {React.createElement(EgsWhiteLogo)}
                 <p>EGS Sistemas</p>
               </div>{" "}
-              <p>|</p> <p>10/2023 - {t("egsFinalDate")}</p>
+              <p>|</p> <p>10/2023 - 05/2025</p>
             </S.PositionData>
             <S.InfoText
               dangerouslySetInnerHTML={{ __html: t("egsResume") }}
@@ -198,11 +198,15 @@ function Right() {
             <Level value={70} />
           </S.LevelContainer>
           <S.LevelContainer>
-            <S.InfoTextLevel>C# - 1.5 {t("years")}</S.InfoTextLevel>
+            <S.InfoTextLevel>C# - 2 {t("years")}</S.InfoTextLevel>
             <Level value={60} />
           </S.LevelContainer>
           <S.LevelContainer>
             <S.InfoTextLevel>AngularJS - 1.5 {t("years")}</S.InfoTextLevel>
+            <Level value={80} />
+          </S.LevelContainer>
+          <S.LevelContainer>
+            <S.InfoTextLevel>Angular - 1 {t("year")}</S.InfoTextLevel>
             <Level value={80} />
           </S.LevelContainer>
           <S.LevelContainer>
