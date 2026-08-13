@@ -29,7 +29,6 @@
   },
   "include": [
     "next-env.d.ts",
-    "src/proxy.ts",
     "src/app/**/*.ts",
     "src/app/**/*.tsx",
     "src/components/animation/**/*.tsx",
