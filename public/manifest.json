@@ -1,25 +1,42 @@
 {
   "short_name": "GS",
   "name": "Gustavo Schultz",
+  "description": "Portfólio bilíngue e currículo digital de Gustavo Schultz, Desenvolvedor Fullstack.",
+  "id": "/pt",
+  "scope": "/",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": [
+    "portfolio",
+    "productivity",
+    "technology",
+    "programmer",
+    "development",
+    "software",
+    "web",
+    "web development",
+    "web design",
+    "web application"
+  ],
   "icons": [
     {
       "src": "favicon.svg",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "any",
       "type": "image/svg"
     },
     {
       "src": "favicon.svg",
       "type": "image/svg",
-      "sizes": "192x192"
+      "sizes": "any"
     },
     {
       "src": "favicon.svg",
       "type": "image/svg",
-      "sizes": "512x512"
+      "sizes": "any"
     }
   ],
-  "start_url": ".",
+  "start_url": "/pt",
   "display": "standalone",
   "theme_color": "#121212",
-  "background_color": "#ffffff"
+  "background_color": "#111111"
 }

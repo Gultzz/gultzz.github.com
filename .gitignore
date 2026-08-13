@@ -8,6 +8,12 @@
 # testing
 /coverage
 
+# next.js
+/.next/
+/out/
+/tsconfig.tsbuildinfo
+/.visual-review/
+
 # misc
 .DS_Store
 .env.local
